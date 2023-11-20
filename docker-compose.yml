@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  mensageriarabbitmq:
+    image: ${DOCKER_REGISTRY-}mensageriarabbitmq
+    build:
+      context: .
+      dockerfile: MensageriaRabbitmq/Dockerfile
+    depends_on:
+      - rabbitmq
+  rabbitmq:
+    image: "rabbitmq:3-management"
+    ports:
+        - "5672:5672"  
+        - "15672:15672"

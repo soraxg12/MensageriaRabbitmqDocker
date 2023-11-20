@@ -1,0 +1,6 @@
+@MensageriaRabbitmq_HostAddress = http://localhost:5192
+
+GET {{MensageriaRabbitmq_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
